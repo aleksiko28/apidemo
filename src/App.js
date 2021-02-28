@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
@@ -14,9 +14,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home}></Route>
-          <Route path="/facemasks" component={Facemasks} />
-          <Route path="/beanies" component={Beanies} />
-          <Route path="/gloves" component={Gloves} />
+          <Route path="/facemasks" render={(props) => <Facemasks />} />
+          <Route path="/beanies" render={(props) => <Beanies />} />
+          <Route path="/gloves" render={(props) => <Gloves />} />
         </Switch>
       </Router>
     </div>

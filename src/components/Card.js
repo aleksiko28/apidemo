@@ -1,20 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function CardItem(props) {
+function Card(props) {
   return (
     <>
       <li className="card-item">
-        <div className="card-item-link" to={props.path}>
-          <figure className="card-item-pic-wrap" data-category={props.label}>
-            <img
-              className="card-item-img"
-              alt="Product image"
-              src={props.src}
-            />
+        <div className="card-item-link">
+          <figure
+            className="card-item-pic-wrap"
+            data-category={props.price}
+            style={{ backgroundColor: props.color }}
+          >
+            <img className="card-item-img" alt="Product" src={props.src} />
           </figure>
           <div className="card-item-info">
-            <h5 className="card-item-text">{props.text}</h5>
+            <p className="card-item-name">{props.name}</p>
+            <p className="card-item-maker"> by {props.manufacturer}</p>
+            <h6 className="card-item-stock">
+              {props.hasInfo ? '' + props.stock : 'stock unknown'}
+            </h6>
           </div>
         </div>
       </li>
@@ -22,4 +25,4 @@ function CardItem(props) {
   );
 }
 
-export default CardItem;
+export default Card;
