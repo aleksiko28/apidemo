@@ -1,6 +1,7 @@
 # A simple UI to show availability of items from three different product categories fetched from Reaktor's API.
 
 The UI should be responsive to resizing and work on mobile with a hamburger menu.
+
 The website is available at heroku here: https://api-demo-aleksi.herokuapp.com/
 
 
