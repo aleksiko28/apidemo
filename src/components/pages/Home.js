@@ -9,7 +9,7 @@ function Home() {
         categories.
       </h1>
       <h2>
-        "stock unknown" indicates that the products availabaility is unknown
+        "stock unknown" indicates that the products availability is unknown.
       </h2>
     </div>
   );
